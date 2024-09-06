@@ -37,6 +37,9 @@ $siteName = Website::getWebsiteName();
         rel="stylesheet"/>
     <link rel="stylesheet" type="text/css"
           href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>Admin/Resources/Vendors/Fontawesome-free/Css/fa-all.min.css">
+    <link
+        href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>Public/Themes/Landingify/Assets/Css/output.css"
+        rel="stylesheet"/>
 
     <!-- CUSTOM HEADERS -->
     <?= Website::getCustomHeader() ?>
@@ -60,7 +63,7 @@ $siteName = Website::getWebsiteName();
     View::loadInclude($includes, "beforeScript", "styles");
     ?>
 </head>
-<body id="page-top">
+<body id="page-top" class="bg-zinc-50">
 <?php
 View::loadInclude($includes, "beforeScript");
 echo CoreController::getInstance()->cmwWarn();

@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --radius: 0.5rem;
+}
+
+@layer components {
+
+    /* ### BASE COMPONENTS ### */
+    /* BUTTON */
+    .btn {
+        @apply
+        text-sm
+        font-semibold
+        leading-6
+        text-zinc-50
+        bg-gradient-to-b
+        from-zinc-900
+        to-zinc-800
+        border-2
+        border-zinc-50/20
+        transition-all
+        rounded-xl
+        px-3
+        py-1
+        hover:opacity-95
+        hover:scale-[0.98]
+        [box-shadow:inset_0_2px_4px_rgba(255,255,255,0.3),0_4px_12px_rgba(0,0,0,0.4)]
+        hover:[box-shadow:inset_0_2px_4px_rgba(255,255,255,0.3),0_0_0_rgba(0,0,0,0)]; /* Ombre intérieure et extérieure */
+    }
+
+    .secondary {
+        @apply text-zinc-900 bg-zinc-50 border-zinc-950/5
+    }
+
+    /* DIVIDER */
+    .divider-wrapper {
+        @apply relative h-0.5 w-full my-8 overflow-hidden;
+    }
+    .divider {
+        @apply absolute w-full h-full bg-gradient-to-r from-transparent via-zinc-600 to-transparent animate-divider;
+    }
+
+    /* ### HEADER COMPONENTS ### */
+    .header-title {
+        @apply text-2xl font-bold tracking-tighter hover:-rotate-2 transition-all duration-100;
+    }
+
+    .menu-item-desktop {
+        @apply px-3 py-1 rounded-lg text-sm font-semibold leading-6 text-zinc-900 hover:bg-zinc-950/10 transition-all duration-200;
+    }
+
+
+}
