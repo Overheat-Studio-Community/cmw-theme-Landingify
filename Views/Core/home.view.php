@@ -31,76 +31,78 @@ $googleReviews = [
 ];
 ?>
 
-<section class="w-full flex flex-col justify-center items-center h-screen relative overflow-hidden">
-    <div id="parallax-section" class="flex flex-col items-center gap-2 max-w-4xl text-center relative z-10 px-6">
-        <h1 class="animate-enter text-4xl sm:text-6xl tracking-tighter font-black leading-none"> <?= ThemeModel::getInstance()->fetchConfigValue('home_hero_title') ?></h1>
-        <h3 class="text-lg tracking-tight"> <?= ThemeModel::getInstance()->fetchConfigValue('home_hero_subtitle') ?></h3>
-        <div class="mt-2 flex gap-2">
-            <button class="btn">Acheter le thème</button>
-        </div>
-    </div>
-</section>
-
-<div class="divider-wrapper">
-    <div class="divider"></div>
-</div>
-
-<section id="google-reviews-section" class="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:max-w-4xl">
-        <figure class="mt-10">
-            <div id="review-rating" class="flex justify-center items-center mb-4 transition-all duration-500 ease-in-out">
-                <!-- Stars in JS -->
+<main class="bg-zinc-50 z-10 mb-44 sm:mb-28">
+    <section class="w-full flex flex-col justify-center items-center h-screen relative overflow-hidden">
+        <div id="parallax-section" class="flex flex-col items-center gap-2 max-w-4xl text-center relative z-10 px-6">
+            <h1 class="animate-enter text-4xl sm:text-6xl tracking-tighter font-black leading-none"> <?= ThemeModel::getInstance()->fetchConfigValue('home_hero_title') ?></h1>
+            <h3 class="text-lg tracking-tight"> <?= ThemeModel::getInstance()->fetchConfigValue('home_hero_subtitle') ?></h3>
+            <div class="mt-2 flex gap-2">
+                <button class="btn">Acheter le thème</button>
             </div>
-            <blockquote id="review-text" class="text-center text-xl font-semibold leading-8 text-zinc-900 sm:text-2xl sm:leading-9 transition-all duration-500 ease-in-out">
-                <p class="transition-all duration-500 ease-in-out"></p>
-            </blockquote>
-            <figcaption class="mt-10">
-                <img id="review-image" class="mx-auto h-10 w-10 rounded-full transition-all duration-500 ease-in-out" src="" alt="">
-                <div class="mt-4 flex items-center justify-center space-x-3 text-base">
-                    <div id="review-author" class="font-semibold text-zinc-900 transition-all duration-500 ease-in-out"></div>
-                    <svg id="review-dot" viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-zinc-900 transition-all duration-500 ease-in-out">
-                        <circle cx="1" cy="1" r="1" />
-                    </svg>
-                    <div id="review-date" class="text-zinc-600 transition-all duration-500 ease-in-out"></div>
-                </div>
-            </figcaption>
-        </figure>
-        <div class="mt-10 flex justify-center space-x-4">
-            <button id="prev-review" class="btn">&larr;</button>
-            <button id="next-review" class="btn">&rarr;</button>
         </div>
+    </section>
+
+    <div class="divider-wrapper">
+        <div class="divider"></div>
     </div>
-</section>
 
-<div class="divider-wrapper rotate-180">
-    <div class="divider"></div>
-</div>
-
-<section class="flex justify-center items-center w-full py-24 sm:py-32">
-    <div class="max-w-6xl w-full flex flex-col sm:flex-row gap-10 justify-center items-center">
-        <div class="flex flex-col sm:w-1/2 gap-2">
-            <div>
-                <span class="text-sm">Cool pets</span>
-                <h3 class="text-4xl font-semibold leading-none tracking-tighter">Here is some pets</h3>
+    <section id="google-reviews-section" class="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:max-w-4xl">
+            <figure class="mt-10">
+                <div id="review-rating" class="flex justify-center items-center mb-4 transition-all duration-500 ease-in-out">
+                    <!-- Stars in JS -->
+                </div>
+                <blockquote id="review-text" class="text-center text-xl font-semibold leading-8 text-zinc-900 sm:text-2xl sm:leading-9 transition-all duration-500 ease-in-out">
+                    <p class="transition-all duration-500 ease-in-out"></p>
+                </blockquote>
+                <figcaption class="mt-10">
+                    <img id="review-image" class="mx-auto h-10 w-10 rounded-full transition-all duration-500 ease-in-out" src="" alt="">
+                    <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                        <div id="review-author" class="font-semibold text-zinc-900 transition-all duration-500 ease-in-out"></div>
+                        <svg id="review-dot" viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-zinc-900 transition-all duration-500 ease-in-out">
+                            <circle cx="1" cy="1" r="1" />
+                        </svg>
+                        <div id="review-date" class="text-zinc-600 transition-all duration-500 ease-in-out"></div>
+                    </div>
+                </figcaption>
+            </figure>
+            <div class="mt-10 flex justify-center space-x-4">
+                <button id="prev-review" class="btn">&larr;</button>
+                <button id="next-review" class="btn">&rarr;</button>
             </div>
-            <p>Proident commodo do nostrud ipsum anim sit. Laboris eu exercitation eu consectetur. Sint veniam ullamco exercitation ad ex sit deserunt adipisicing officia consectetur amet excepteur aliqua qui labore. Mollit reprehenderit tempor et.</p>
-            <a href="#" class="btn w-min whitespace-nowrap">See more</a>
         </div>
-        <div id="image-stack" class="relative h-96 w-full sm:w-1/2 cursor-pointer">
-            <?php
-            $images = [
-                'https://loremflickr.com/640/480/cats',
-                'https://loremflickr.com/640/480/dogs',
-                'https://loremflickr.com/640/480/birds',
-            ];
-            foreach ($images as $index => $image): ?>
-                <div class="absolute top-0 left-0 w-full h-full transition-all duration-500 ease-in-out" style="transform: rotate(<?= $index * 5 ?>deg) translateZ(<?= $index * 10 ?>px); z-index: <?= count($images) - $index ?>;">
-                    <img class="w-full h-full object-cover rounded-2xl shadow-2xl" loading="lazy" src="<?= $image ?>" alt="Image <?= $index + 1 ?>">
-                </div>
-            <?php endforeach; ?>
-        </div>
+    </section>
+
+    <div class="divider-wrapper rotate-180">
+        <div class="divider"></div>
     </div>
-</section>
+
+    <section class="flex justify-center items-center w-full px-6 py-24 sm:py-32 lg:px-8">
+        <div class="max-w-6xl w-full flex flex-col sm:flex-row gap-10 justify-center items-center">
+            <div class="flex flex-col sm:w-1/2 gap-2">
+                <div>
+                    <span class="text-sm">Cool pets</span>
+                    <h3 class="text-4xl font-semibold leading-none tracking-tighter">Here is some pets</h3>
+                </div>
+                <p>Proident commodo do nostrud ipsum anim sit. Laboris eu exercitation eu consectetur. Sint veniam ullamco exercitation ad ex sit deserunt adipisicing officia consectetur amet excepteur aliqua qui labore. Mollit reprehenderit tempor et.</p>
+                <a href="#" class="btn w-min whitespace-nowrap">See more</a>
+            </div>
+            <div id="image-stack" class="relative w-full sm:w-1/2 cursor-pointer px-8" style="aspect-ratio: 16/9">
+                <?php
+                $images = [
+                    'https://loremflickr.com/640/480/cats',
+                    'https://loremflickr.com/640/480/dogs',
+                    'https://loremflickr.com/640/480/birds',
+                ];
+                foreach ($images as $index => $image): ?>
+                    <div class="absolute top-0 left-0 w-full h-full transition-all duration-500 ease-in-out" style="transform: rotate(<?= $index * 5 ?>deg) translateZ(<?= $index * 10 ?>px); z-index: <?= count($images) - $index ?>;">
+                        <img class="w-full h-full object-cover rounded-2xl shadow-2xl" loading="lazy" src="<?= $image ?>" alt="Image <?= $index + 1 ?>">
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+</main>
 
 <!-- ### JAVASCRIPT ### -->
 
@@ -117,7 +119,7 @@ $googleReviews = [
 
             images.forEach((img, index) => {
                 img.style.transform = `rotate(${index * 5}deg) translateZ(${index * 10}px)`;
-                img.style.zIndex = totalImages - index;
+                img.style.zIndex = (totalImages - index).toString();
             });
         }
 
