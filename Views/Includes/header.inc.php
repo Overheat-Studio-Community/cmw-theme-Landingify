@@ -24,7 +24,7 @@
             <a href="#" class="menu-item-desktop">Company</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="btn">Découvre nos thèmes</a>
+            <a href="https://overheat.studio/#contact-us-section" target="_blank" class="btn">Contactez-nous</a>
         </div>
     </nav>
 </header>

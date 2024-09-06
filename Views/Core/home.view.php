@@ -35,7 +35,9 @@ $googleReviews = [
     <div id="parallax-section" class="flex flex-col items-center gap-2 max-w-4xl text-center relative z-10 px-6">
         <h1 class="animate-enter text-4xl sm:text-6xl tracking-tighter font-black leading-none"> <?= ThemeModel::getInstance()->fetchConfigValue('home_hero_title') ?></h1>
         <h3 class="text-lg tracking-tight"> <?= ThemeModel::getInstance()->fetchConfigValue('home_hero_subtitle') ?></h3>
-        <button class="btn mt-2">Acheter le thème</button>
+        <div class="mt-2 flex gap-2">
+            <button class="btn">Acheter le thème</button>
+        </div>
     </div>
 </section>
 
@@ -69,6 +71,59 @@ $googleReviews = [
         </div>
     </div>
 </section>
+
+<div class="divider-wrapper rotate-180">
+    <div class="divider"></div>
+</div>
+
+<section class="flex justify-center items-center w-full py-24 sm:py-32">
+    <div class="max-w-6xl w-full flex flex-col sm:flex-row gap-10 justify-center items-center">
+        <div class="flex flex-col sm:w-1/2 gap-2">
+            <div>
+                <span class="text-sm">Cool pets</span>
+                <h3 class="text-4xl font-semibold leading-none tracking-tighter">Here is some pets</h3>
+            </div>
+            <p>Proident commodo do nostrud ipsum anim sit. Laboris eu exercitation eu consectetur. Sint veniam ullamco exercitation ad ex sit deserunt adipisicing officia consectetur amet excepteur aliqua qui labore. Mollit reprehenderit tempor et.</p>
+            <a href="#" class="btn w-min whitespace-nowrap">See more</a>
+        </div>
+        <div id="image-stack" class="relative h-96 w-full sm:w-1/2 cursor-pointer">
+            <?php
+            $images = [
+                'https://loremflickr.com/640/480/cats',
+                'https://loremflickr.com/640/480/dogs',
+                'https://loremflickr.com/640/480/birds',
+            ];
+            foreach ($images as $index => $image): ?>
+                <div class="absolute top-0 left-0 w-full h-full transition-all duration-500 ease-in-out" style="transform: rotate(<?= $index * 5 ?>deg) translateZ(<?= $index * 10 ?>px); z-index: <?= count($images) - $index ?>;">
+                    <img class="w-full h-full object-cover rounded-2xl shadow-2xl" loading="lazy" src="<?= $image ?>" alt="Image <?= $index + 1 ?>">
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<!-- ### JAVASCRIPT ### -->
+
+<!-- Image Stack -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const imageStack = document.getElementById('image-stack');
+        const images = Array.from(imageStack.querySelectorAll('div'));
+        const totalImages = images.length;
+
+        function rotateImages() {
+            const firstImage = images.shift();
+            images.push(firstImage);
+
+            images.forEach((img, index) => {
+                img.style.transform = `rotate(${index * 5}deg) translateZ(${index * 10}px)`;
+                img.style.zIndex = totalImages - index;
+            });
+        }
+
+        imageStack.addEventListener('click', rotateImages);
+    });
+</script>
 
 <!-- Google Reviews -->
 <script>
