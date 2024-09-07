@@ -2,7 +2,7 @@
 ?>
 
 <header class="fixed inset-x-0 top-0 z-50 flex flex-col justify-center items-center backdrop-blur-sm bg-zinc-50/80">
-    <nav class="max-w-6xl w-full flex items-center justify-between p-4 lg:px-8" aria-label="Global">
+    <nav class="max-w-6xl w-full flex items-center justify-between p-4 xl:px-0" aria-label="Global">
         <div class="flex lg:flex-1">
             <a href="/" class="-m-1.5 p-1.5">
                 <span class="sr-only">Landingify</span>
@@ -17,12 +17,14 @@
                 </svg>
             </button>
         </div>
+        <!--
         <div class="hidden lg:flex lg:gap-x-6">
             <a href="#" class="menu-item-desktop">Product</a>
             <a href="#" class="menu-item-desktop">Features</a>
             <a href="#" class="menu-item-desktop">Marketplace</a>
             <a href="#" class="menu-item-desktop">Company</a>
         </div>
+        -->
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="https://overheat.studio/#contact-us-section" target="_blank" class="btn">Contactez-nous</a>
         </div>
