@@ -43,12 +43,8 @@ $googleReviews = [
         </div>
     </section>
 
-    <div class="divider-wrapper">
-        <div class="divider"></div>
-    </div>
-
     <!-- REVIEWS SECTION -->
-    <section id="google-reviews-section" class="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:px-8">
+    <section id="google-reviews-section" class="relative bg-white isolate overflow-hidden px-6 py-24 sm:py-32 lg:px-8">
         <div class="mx-auto max-w-2xl lg:max-w-4xl">
             <figure class="mt-10">
                 <div id="review-rating" class="flex justify-center items-center mb-4 transition-all duration-500 ease-in-out">
@@ -75,14 +71,10 @@ $googleReviews = [
         </div>
     </section>
 
-    <div class="divider-wrapper rotate-180">
-        <div class="divider"></div>
-    </div>
-
     <!-- IMAGE STACK SECTION -->
     <section class="flex justify-center items-center w-full px-6 py-24 sm:py-32 lg:px-8">
         <div class="max-w-6xl w-full flex flex-col sm:flex-row gap-10 justify-center items-center">
-            <div class="flex flex-col sm:w-1/2 gap-2">
+            <div class="flex flex-col sm:w-1/2 gap-2 mb-4 sm:mb-0">
                 <div>
                     <span class="text-sm">Cool pets</span>
                     <h3 class="text-4xl font-semibold leading-none tracking-tighter">Here is some pets</h3>
@@ -106,10 +98,57 @@ $googleReviews = [
         </div>
     </section>
 
+    <!-- CONTACT SECTION -->
+    <section class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">Contactez-nous</h2>
+            <p class="mt-2 text-lg leading-6 text-zinc-600">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
+        </div>
+        <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-10">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                <div>
+                    <label for="first-name" class="label">Prénom</label>
+                    <input type="text" name="first-name" id="first-name" autocomplete="given-name" placeholder="Ada" class="input">
+                </div>
+                <div>
+                    <label for="last-name" class="label">Nom</label>
+                    <input type="text" name="last-name" id="last-name" autocomplete="family-name" placeholder="Lovelace" class="input">
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="email" class="label">Email</label>
+                    <input type="email" name="email" id="email" autocomplete="email" placeholder="ada.lovelace@overheat.studio" class="input">
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="phone-number" class="label">Phone number</label>
+                    <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" placeholder="0612345678" class="input">
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="message" class="label">Message</label>
+                    <textarea name="message" id="message" rows="4" placeholder="Bonjour..." class="input"></textarea>
+                </div>
+                <div class="flex gap-x-4 sm:col-span-2">
+                    <div class="flex h-6 items-center">
+                        <button type="button" id="toggle-button" class="toggle" role="switch" aria-checked="false" aria-labelledby="switch-1-label">
+                            <span class="sr-only">Accepter la politique de confidentialité</span>
+                            <span id="toggle-thumb" aria-hidden="true" class="toggle-thumb"></span>
+                        </button>
+                    </div>
+                    <label class="text-sm leading-6 text-zinc-600" id="switch-1-label">
+                        En sélectionnant ceci, vous acceptez notre
+                        <a href="#" class="font-semibold text-zinc-900">politique de confidentialité</a>.
+                    </label>
+                </div>
+            </div>
+            <div class="mt-10">
+                <button type="submit" class="btn xl w-full">Envoyer</button>
+            </div>
+        </form>
+    </section>
+
     <!-- CTA SECTION -->
     <section class="flex justify-center items-center w-full px-6 py-24 sm:py-32 lg:px-8">
         <div class="max-w-6xl w-full rounded-3xl border-2 border-zinc-50/20 bg-zinc-900 flex flex-col-reverse sm:flex-row p-2 shadow-2xl">
-            <div class="flex flex-col sm:w-1/2 gap-2 p-6 justify-center">
+            <div class="flex flex-col sm:w-1/2 gap-2 p-3 sm:p-6 justify-center">
                 <div>
                     <span class="text-sm text-zinc-50">Cool flowers</span>
                     <h3 class="text-4xl font-semibold leading-none tracking-tighter text-zinc-50">Here is some flowers</h3>
@@ -123,9 +162,42 @@ $googleReviews = [
             </div>
         </div>
     </section>
+
+    <!--
+    DIVIDER EXEMPLE
+     <div class="divider-wrapper rotate-180">
+        <div class="divider"></div>
+    </div>
+     -->
 </main>
 
 <!-- ### JAVASCRIPT ### -->
+
+<!-- Form Toggle -->
+<script>
+    const button = document.getElementById('toggle-button');
+    const thumb = document.getElementById('toggle-thumb');
+
+    button.addEventListener('click', () => {
+        const isChecked = button.getAttribute('aria-checked') === 'true';
+
+        // Toggle state
+        button.setAttribute('aria-checked', !isChecked);
+
+        // Change classes based on state
+        if (isChecked) {
+            button.classList.add('bg-zinc-200');
+            button.classList.remove('bg-zinc-600');
+            thumb.classList.add('translate-x-0');
+            thumb.classList.remove('translate-x-3.5');
+        } else {
+            button.classList.add('bg-zinc-600');
+            button.classList.remove('bg-zinc-200');
+            thumb.classList.add('translate-x-3.5');
+            thumb.classList.remove('translate-x-0');
+        }
+    });
+</script>
 
 <!-- Image Stack -->
 <script>
@@ -166,7 +238,7 @@ $googleReviews = [
 
         function createStarRating(rating) {
             const fullStar = '<svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>';
-            const emptyStar = '<svg class="w-10 h-10 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>';
+            const emptyStar = '<svg class="w-10 h-10 text-zinc-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>';
 
             let stars = '';
             for (let i = 0; i < 5; i++) {
