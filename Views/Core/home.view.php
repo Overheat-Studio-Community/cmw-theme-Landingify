@@ -38,7 +38,7 @@ $googleReviews = [
             <h1 class="animate-enter text-4xl sm:text-6xl tracking-tighter font-black leading-none"> <?= ThemeModel::getInstance()->fetchConfigValue('home_hero_title') ?></h1>
             <h3 class="text-lg tracking-tight"> <?= ThemeModel::getInstance()->fetchConfigValue('home_hero_subtitle') ?></h3>
             <div class="mt-2 flex gap-2">
-                <button class="btn">Acheter le thème</button>
+                <button class="btn xl">Acheter le thème</button>
             </div>
         </div>
     </section>
