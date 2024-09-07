@@ -87,7 +87,7 @@ $googleReviews = [
                 <p>Proident commodo do nostrud ipsum anim sit. Laboris eu exercitation eu consectetur. Sint veniam ullamco exercitation ad ex sit deserunt adipisicing officia consectetur amet excepteur aliqua qui labore. Mollit reprehenderit tempor et.</p>
                 <a href="#" class="btn w-min whitespace-nowrap">See more</a>
             </div>
-            <div id="image-stack" class="relative w-full sm:w-1/2 cursor-pointer px-8" style="aspect-ratio: 16/9">
+            <div id="image-stack" class="relative w-full sm:w-1/2 cursor-pointer px-8" style="aspect-ratio: 4/3">
                 <?php
                 $images = [
                     'https://loremflickr.com/640/480/cats',
@@ -99,6 +99,23 @@ $googleReviews = [
                         <img class="w-full h-full object-cover rounded-2xl shadow-2xl" loading="lazy" src="<?= $image ?>" alt="Image <?= $index + 1 ?>">
                     </div>
                 <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex justify-center items-center w-full px-6 py-24 sm:py-32 lg:px-8">
+        <div class="max-w-6xl w-full rounded-3xl border-2 border-zinc-50/20 bg-zinc-900 flex flex-col-reverse sm:flex-row p-2 shadow-2xl">
+            <div class="flex flex-col sm:w-1/2 gap-2 p-6 justify-center">
+                <div>
+                    <span class="text-sm text-zinc-50">Cool flowers</span>
+                    <h3 class="text-4xl font-semibold leading-none tracking-tighter text-zinc-50">Here is some flowers</h3>
+                </div>
+                <p class="text-zinc-50">Proident commodo do nostrud ipsum anim sit. Laboris eu exercitation eu consectetur. Sint veniam ullamco exercitation ad ex sit deserunt adipisicing officia consectetur amet excepteur aliqua qui labore. Mollit reprehenderit tempor et.</p>
+                <a href="#" class="btn secondary w-min whitespace-nowrap">See more</a>
+            </div>
+            <div class="flex w-full sm:w-1/2 h-full hover:scale-[0.98] transition-all duration-200 relative" style="aspect-ratio: 4/3">
+                <img class="w-full h-full object-cover rounded-2xl" src="https://loremflickr.com/640/480/flowers" alt="flowers">
+                <span class="absolute bottom-2 right-2 bg-zinc-900 border-2 border-zinc-50/10 rounded-xl px-2 py-0.5 text-zinc-50">Flowers</span>
             </div>
         </div>
     </section>
