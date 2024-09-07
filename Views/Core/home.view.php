@@ -32,6 +32,7 @@ $googleReviews = [
 ?>
 
 <main class="bg-zinc-50 z-10 mb-44 sm:mb-28">
+    <!-- HERO SECTION -->
     <section class="w-full flex flex-col justify-center items-center h-screen relative overflow-hidden">
         <div id="parallax-section" class="flex flex-col items-center gap-2 max-w-4xl text-center relative z-10 px-6">
             <h1 class="animate-enter text-4xl sm:text-6xl tracking-tighter font-black leading-none"> <?= ThemeModel::getInstance()->fetchConfigValue('home_hero_title') ?></h1>
@@ -46,6 +47,7 @@ $googleReviews = [
         <div class="divider"></div>
     </div>
 
+    <!-- REVIEWS SECTION -->
     <section id="google-reviews-section" class="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:px-8">
         <div class="mx-auto max-w-2xl lg:max-w-4xl">
             <figure class="mt-10">
@@ -53,7 +55,7 @@ $googleReviews = [
                     <!-- Stars in JS -->
                 </div>
                 <blockquote id="review-text" class="text-center text-xl font-semibold leading-8 text-zinc-900 sm:text-2xl sm:leading-9 transition-all duration-500 ease-in-out">
-                    <p class="transition-all duration-500 ease-in-out"></p>
+                    <p class="transition-all duration-500 ease-in-out leading-none"></p>
                 </blockquote>
                 <figcaption class="mt-10">
                     <img id="review-image" class="mx-auto h-10 w-10 rounded-full transition-all duration-500 ease-in-out" src="" alt="">
@@ -77,6 +79,7 @@ $googleReviews = [
         <div class="divider"></div>
     </div>
 
+    <!-- IMAGE STACK SECTION -->
     <section class="flex justify-center items-center w-full px-6 py-24 sm:py-32 lg:px-8">
         <div class="max-w-6xl w-full flex flex-col sm:flex-row gap-10 justify-center items-center">
             <div class="flex flex-col sm:w-1/2 gap-2">
@@ -103,6 +106,7 @@ $googleReviews = [
         </div>
     </section>
 
+    <!-- CTA SECTION -->
     <section class="flex justify-center items-center w-full px-6 py-24 sm:py-32 lg:px-8">
         <div class="max-w-6xl w-full rounded-3xl border-2 border-zinc-50/20 bg-zinc-900 flex flex-col-reverse sm:flex-row p-2 shadow-2xl">
             <div class="flex flex-col sm:w-1/2 gap-2 p-6 justify-center">
