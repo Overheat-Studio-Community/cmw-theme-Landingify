@@ -42,7 +42,7 @@
         border-zinc-200
         bg-gradient-to-b
         from-zinc-100
-        to-zinc-200
+        to-zinc-300
         [box-shadow:inset_0_2px_4px_rgba(150,150,150,0.3),0_4px_12px_rgba(150,150,150,0.2)]
         hover:[box-shadow:inset_0_2px_4px_rgba(150,150,150,0.3),0_0_0_rgba(150,150,150,0)];
     }
