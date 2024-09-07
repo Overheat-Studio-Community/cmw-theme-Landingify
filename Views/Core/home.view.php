@@ -98,8 +98,65 @@ $googleReviews = [
         </div>
     </section>
 
+    <!-- TEAM SECTION -->
+    <section class="flex bg-white justify-center items-center w-full px-6 py-24 sm:py-32 lg:px-8">
+        <div class="max-w-6xl">
+            <div class="flex flex-col mb-8">
+                <span class="text-sm">La dream team</span>
+                <h1 class="text-4xl font-semibold tracking-tight">L'équipe Landingify</h1>
+                <p>Nisi amet adipisicing laboris sint sunt laborum ea cillum est consequat. Amet incididunt sint deserunt anim est eu officia minim velit. Laborum exercitation laborum exercitation tempor id amet commodo laboris sunt nisi minim.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="group rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-rotate-2">
+                    <div class="h-64 w-full overflow-hidden">
+                        <img class="object-cover w-full h-full rounded-xl transform transition-transform duration-300 group-hover:scale-110"
+                             src="https://loremflickr.com/640/480/person"
+                             alt="Person">
+                    </div>
+                    <div class="p-4 pt-3 transition-all duration-300">
+                        <h3 class="text-xl font-semibold transition-all duration-300">Thomas</h3>
+                        <span class="text-sm text-zinc-600 transition-all duration-300">Dev front chevronné</span>
+                    </div>
+                </div>
+                <div class="group rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:rotate-2">
+                    <div class="h-64 w-full overflow-hidden">
+                        <img class="object-cover w-full h-full rounded-xl transform transition-transform duration-300 group-hover:scale-110"
+                             src="https://loremflickr.com/640/480/person"
+                             alt="Person">
+                    </div>
+                    <div class="p-4 pt-3 transition-all duration-300">
+                        <h3 class="text-xl font-semibold transition-all duration-300">Thomas</h3>
+                        <span class="text-sm text-zinc-600 transition-all duration-300">Dev front chevronné</span>
+                    </div>
+                </div>
+                <div class="group rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-rotate-2">
+                    <div class="h-64 w-full overflow-hidden">
+                        <img class="object-cover w-full h-full rounded-xl transform transition-transform duration-300 group-hover:scale-110"
+                             src="https://loremflickr.com/640/480/person"
+                             alt="Person">
+                    </div>
+                    <div class="p-4 pt-3 transition-all duration-300">
+                        <h3 class="text-xl font-semibold transition-all duration-300">Thomas</h3>
+                        <span class="text-sm text-zinc-600 transition-all duration-300">Dev front chevronné</span>
+                    </div>
+                </div>
+                <div class="group rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:rotate-2">
+                    <div class="h-64 w-full overflow-hidden">
+                        <img class="object-cover w-full h-full rounded-xl transform transition-transform duration-300 group-hover:scale-110"
+                             src="https://loremflickr.com/640/480/person"
+                             alt="Person">
+                    </div>
+                    <div class="p-4 pt-3 transition-all duration-300">
+                        <h3 class="text-xl font-semibold transition-all duration-300">Thomas</h3>
+                        <span class="text-sm text-zinc-600 transition-all duration-300">Dev front chevronné</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT SECTION -->
-    <section class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <section class="isolate px-6 py-24 sm:py-32 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
             <h2 class="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">Contactez-nous</h2>
             <p class="mt-2 text-lg leading-6 text-zinc-600">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
@@ -146,7 +203,7 @@ $googleReviews = [
     </section>
 
     <!-- CTA SECTION -->
-    <section class="flex justify-center items-center w-full px-6 py-24 sm:py-32 lg:px-8">
+    <section class="flex bg-white justify-center items-center w-full px-6 py-24 sm:py-32 lg:px-8">
         <div class="max-w-6xl w-full rounded-3xl border-2 border-zinc-50/20 bg-zinc-900 flex flex-col-reverse sm:flex-row p-2 shadow-2xl">
             <div class="flex flex-col sm:w-1/2 gap-2 p-3 sm:p-6 justify-center">
                 <div>
