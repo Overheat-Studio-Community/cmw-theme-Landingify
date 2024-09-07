@@ -1,4 +1,5 @@
 <?php
+use CMW\Controller\Users\UsersController;
 ?>
 
 <header class="fixed inset-x-0 top-0 z-50 flex flex-col justify-center items-center backdrop-blur-sm bg-zinc-50/80">
@@ -25,7 +26,11 @@
             <a href="#" class="menu-item-desktop">Company</a>
         </div>
         -->
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
+            <?php if(UsersController::isAdminLogged()): ?>
+                <a href="/logout" class="btn to-orange-500 border-orange-500">Logout</a>
+                <a href="/cmw-admin" class="btn to-blue-500 border-blue-500 mr-4">Admin</a>
+            <?php endif; ?>
             <a href="https://overheat.studio/#contact-us-section" target="_blank" class="btn">Contactez-nous</a>
         </div>
     </nav>
